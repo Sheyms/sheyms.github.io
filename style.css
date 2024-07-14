@@ -65,6 +65,12 @@ img {
     max-width: 100%;
 }
 
+.artist-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .artist-images,
 .worked-with-logos,
 .case-studies,
@@ -106,6 +112,33 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.learned-from-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.learned-from-info {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.learned-from-image {
+    max-width: 100%;
+}
+
+.learned-from-image img {
+    border: 1px solid #e4dcd6;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.learned-from-image img:hover {
+    transform: scale(1.05);
 }
 
 h2 {
@@ -174,8 +207,20 @@ a:hover {
     }
 
     .learned-from-section,
-    .mobile-first-section {
+    .mobile-first-section,
+    .artist-section {
         flex-direction: row;
+    }
+
+    .learned-from-info {
+        text-align: center;
+        flex: 2;
+    }
+
+    .learned-from-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .learned-from-info,
@@ -213,6 +258,7 @@ a:hover {
     .container,
     .learned-from-section,
     .mobile-first-section,
+    .artist-section,
     .case-studies,
     .work-with-me {
         flex-direction: column;
