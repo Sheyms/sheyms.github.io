@@ -1,0 +1,253 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f8f5f2;
+    color: #4e4039;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-image img {
+    border: 5px solid #e4dcd6;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #4e4039;
+}
+
+.profile-info h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: normal;
+    color: #4e4039;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Section styles */
+.section,
+.artist-section,
+.learned-from-section,
+.worked-with-section,
+.website-design-section,
+.mobile-first-section {
+    padding: 40px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.artist-images,
+.worked-with-logos,
+.case-studies,
+.templates,
+.posters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.artist-images img,
+.worked-with-logos img,
+.case-studies img,
+.templates img,
+.posters img {
+    border: 1px solid #e4dcd6;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.artist-images img:hover,
+.worked-with-logos img:hover,
+.case-studies img:hover,
+.templates img:hover,
+.posters img:hover {
+    transform: scale(1.05);
+}
+
+.artist-description,
+.learned-from-info,
+.mobile-first-info {
+    max-width: 600px;
+    margin: auto;
+}
+
+.learned-from-section,
+.mobile-first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #4e4039;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: #3d3d3d;
+    text-decoration: none;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* Work with Me section */
+.work-with-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-with-me .content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.work-with-me .image img {
+    width: 600px;
+    height: 700px;
+}
+
+.work-with-me .logo img {
+
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .profile-info {
+        margin-left: 40px;
+        text-align: left;
+    }
+
+    .learned-from-section,
+    .mobile-first-section {
+        flex-direction: row;
+    }
+
+    .learned-from-info,
+    .mobile-first-info {
+        margin-left: 40px;
+    }
+
+    .case-studies {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .case-study {
+        margin-bottom: 0;
+    }
+
+    .work-with-me {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .work-with-me .content {
+        text-align: left;
+    }
+
+    .work-with-me .logo img {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .container,
+    .learned-from-section,
+    .mobile-first-section,
+    .case-studies,
+    .work-with-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-info,
+    .learned-from-info,
+    .mobile-first-info {
+        margin-left: 0;
+    }
+
+    .case-study {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animation styles */
+.section,
+.artist-section,
+.learned-from-section,
+.worked-with-section,
+.website-design-section,
+.mobile-first-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.in-view,
+.artist-section.in-view,
+.learned-from-section.in-view,
+.worked-with-section.in-view,
+.website-design-section.in-view,
+.mobile-first-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
